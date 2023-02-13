@@ -1,1 +1,72 @@
-{"basics":{"name":"John Doe","image":"","email":"john@gmail.com","phone":"1234567890"},"skills":["HTML","CSS","Javascript","Bootstrap","Angular","React","Express","MySQL","NGINX","Agile Development","DOM","Web APIs","User Authentication","OAuth","Heroku","Github","Jest","Python","java"],"projects":[{"id":1,"title":"Crypto Currency Dashboard","image":"http://localhost:8080/images/BMX.jpg","github":"https://github.com","demo":"https://www.heroku.com/"}]}
+{
+    "basics": {
+        "name": "John Doe",
+        "image": "",
+        "email": "john@gmail.com",
+        "phone": "1234567890"
+    },
+    "skills": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Bootstrap",
+        "Angular",
+        "React",
+        "Express",
+        "MySQL",
+        "NGINX",
+        "Agile Development",
+        "DOM",
+        "Web APIs",
+        "User Authentication",
+        "OAuth",
+        "Heroku",
+        "Github",
+        "Jest",
+        "Python"
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "image": "http://localhost:8080/images/project1.jpg",
+            "title": "Crypto Currency Dashboard & Financial Visualization",
+            "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        },
+        {
+            "id": 2,
+            "image": "http://localhost:8080/images/project2.jpg",
+            "title": "Data science in a big data world",
+            "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        },
+        {
+            "id": 3,
+            "image": "http://localhost:8080/images/project3.jpg",
+            "title": "Figma dashboard UI kit for data design",
+            "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        },
+        {
+            "id": 4,
+            "image": "http://localhost:8080/images/project4.jpg",
+            "title": "Maintaining tasks and tracking progress",
+            "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        },
+        {
+            "id": 5,
+            "image": "http://localhost:8080/images/project5.jpg",
+            "title": "Infographics in Figma",
+            "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        },
+        {
+            "id": 6,
+            "image": "http://localhost:8080/images/project6.jpg",
+            "title": "Chart templates & infographics",
+            "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        }
+    ]
+}
