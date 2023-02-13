@@ -7,17 +7,15 @@ function getResume() {
   return JSON.parse(resumeFromFile);
 }
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   const resume = getResume();
-  console.log(req.body.skills);
-  resume.skills.push(req.body.skills);
-  fs.writeFileSync('./data/resume.json', JSON.stringify(resume));
   res.json(resume);
 })
 
-// router.patch('/', (req, res) => {
 
-// })
+
+
+
 
 
 module.exports = router;
