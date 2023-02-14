@@ -23,7 +23,8 @@
         "Heroku",
         "Github",
         "Jest",
-        "Python"
+        "Python",
+        "C++"
     ],
     "projects": [
         {
@@ -66,6 +67,12 @@
             "image": "http://localhost:8080/images/project6.jpg",
             "title": "Chart templates & infographics",
             "github": "https://github.com",
+            "demo": "https://www.heroku.com/"
+        },
+        {
+            "id": "c3e5abb0-7a5f-45dd-be1f-5afb7660b39d",
+            "title": "TEst 1",
+            "image": "http://localhost:8080/images/project1.jpg",
             "demo": "https://www.heroku.com/"
         }
     ]

@@ -8,6 +8,8 @@ function getResume() {
 }
 
 router.get('/', (req, res) => {
+  const user = req.user
+  console.log(user)
   const resume = getResume();
   res.json(resume);
 })
