@@ -19,7 +19,7 @@ const jsonSecretKey = "f91e4494-04b3-4d49-8c27-57faed9e5785";
 
 app.use((req, res, next) => {
   // Signup and login are public URLs that don't require a token
-  if (req.url === "/signup" || req.url === "/login") {
+  if (req.url === "/signup" || req.url === "/login" ) {
     next();
   } else {
     // Format of request is BEARER <token>. Splitting on ' ' will create an

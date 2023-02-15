@@ -15,11 +15,15 @@ function getResumeById(id) {
 
 router.get('/:id', (req, res) => {
   const isCurrent =  req?.user?.id === req.params.id
-
+  user = req.user.id;
   const resume = getResumeById(req.params.id);
   console.log(resume)
-  res.json({resume, isCurrent} ) ;
+  res.json({resume, isCurrent, user} ) ;
 })
+
+// router.get('/', (req, res) => {
+//   res.json(req.user.id);
+// })
 
 router.delete('/:id', (req, res) => {
   const resumeList = getResume();
