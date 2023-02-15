@@ -23,15 +23,15 @@ router.post('/', (req, res) => {
   if (req.body.skills) {
     resume.skills.push(req.body.skills);
   }
-  // if ((req.body.title||req.body.image||req.body.demo)) {
-  //   const newProject = {
-  //     id: uuidv4(),
-  //     title: req.body.title || "Add a project title",
-  //     image: req.body.image || "http://localhost:8080/images/project1.jpg",
-  //     demo: req.body.demo || "https://www.heroku.com/"
-  //   }
-  //   resume.projects.push(newProject);
-  // }
+  if ((req.body.title||req.body.image||req.body.demo)) {
+    const newProject = {
+      id: uuidv4(),
+      title: req.body.title || "Add a project title",
+      image: req.body.image || "http://localhost:8080/images/project1.jpg",
+      demo: req.body.demo || "https://www.heroku.com/"
+    }
+    resume.projects.push(newProject);
+  }
 
   fs.writeFileSync('./data/resume.json', JSON.stringify(resumeList));
   res.json(resume);
