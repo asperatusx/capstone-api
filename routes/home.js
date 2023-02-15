@@ -2,18 +2,20 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
-function getResume() {
+function getResumeById(id) {
   const resumeFromFile = fs.readFileSync('./data/resume.json');
-  return JSON.parse(resumeFromFile);
+  const resumes = JSON.parse(resumeFromFile);
+  return resumes.find(resume => resume.id === id)
 }
 
-router.get('/', (req, res) => {
-  const user = req.user
-  console.log(user)
-  const resume = getResume();
-  res.json(resume);
-})
+router.get('/:id', (req, res) => {
 
+  const isCurrent =  req?.user?.id === req.params.id
+
+  const resume = getResumeById(req.params.id);
+  console.log(resume)
+  res.json({resume, isCurrent} ) ;
+})
 
 
 

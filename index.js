@@ -26,8 +26,8 @@ app.use((req, res, next) => {
     // array where the token is at index 1
     const token = getToken(req);
 
-    if (token) {
-      console.log('Auth Token:', token);
+    if (token && token !== 'null') {
+      console.log('Auth Token:::', token==='null');
       if (jwt.verify(token, jsonSecretKey)) {
         // Decode the token to pass along to end-points that may need
         // access to data stored in the token.
@@ -80,7 +80,7 @@ app.post("/login", (req, res) => {
 
   if (user) {
     console.log('Found user:', user);
-    res.json({ token: jwt.sign({ name: user.username }, jsonSecretKey) });
+    res.json({ token: jwt.sign({ name: user.username }, jsonSecretKey), id: user.id });
   } else {
     res.status(403).json({
       token: "",
